@@ -1,3 +1,5 @@
+
+
 const invoices = [
     {
         name: "Santa Monica",
@@ -45,4 +47,8 @@ const invoices = [
 
 export function getInvoices(){
     return invoices;
+}
+
+export function getInvoice(number: number){
+    return invoices.find((invoice)=>invoice.number === number); //Metodo find busca pela invoice correspondente ao numero recebido no parametro
 }
