@@ -1,6 +1,6 @@
 
 
-const invoices = [
+let invoices = [
     {
         name: "Santa Monica",
         number: 1995,
@@ -51,4 +51,10 @@ export function getInvoices(){
 
 export function getInvoice(number: number){
     return invoices.find((invoice)=>invoice.number === number); //Metodo find busca pela invoice correspondente ao numero recebido no parametro
+}
+
+export function deleteInvoice(number:any){
+    invoices = invoices.filter(
+        (invoice)=>invoice.number !== number
+    );
 }
